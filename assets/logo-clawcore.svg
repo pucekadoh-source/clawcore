@@ -1,7 +1,19 @@
-<svg width="160" height="60" viewBox="0 0 220 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M15 40C15 18 38 5 60 15C75 22 85 30 105 30C95 45 75 50 60 50C40 50 25 65 15 40Z" fill="#ef4444"/>
-  <circle cx="110" cy="40" r="7" fill="#3b82f6"/>
-  <text x="125" y="48" fill="white" font-size="28" font-family="Arial, Helvetica, sans-serif" font-weight="600">
+<svg viewBox="0 0 260 80" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="clawGrad" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#ef4444"/>
+      <stop offset="100%" stop-color="#b91c1c"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Claw Shape -->
+  <path d="M20 45C20 20 45 5 70 18C85 26 95 30 120 30C110 48 85 55 65 55C45 55 28 70 20 45Z" fill="url(#clawGrad)"/>
+
+  <!-- Blue Dot -->
+  <circle cx="125" cy="40" r="6" fill="#3b82f6"/>
+
+  <!-- Text -->
+  <text x="145" y="48" fill="white" font-size="28" font-family="Arial, Helvetica, sans-serif" font-weight="600">
     ClawCore
   </text>
 </svg>
