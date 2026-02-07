@@ -6,23 +6,60 @@
 <title>ClawCore — Autonomous Signal Intelligence</title>
 
 <style>
-body {
-  margin:0;
-  font-family: 'Segoe UI', Arial, sans-serif;
-  background: radial-gradient(circle at top, #0f172a, #020617 60%);
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:'Segoe UI',sans-serif;
+  background:#020617;
   color:white;
+  overflow-x:hidden;
 }
 
-.logo{
-  text-align:center;
-  padding:60px 20px 10px;
+/* 🌌 Background grid */
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size:60px 60px;
+  z-index:-2;
 }
-.logo img{
-  width:260px;
-  height:auto;
-  display:block;
+
+body::after{
+  content:"";
+  position:fixed;
+  inset:0;
+  background:radial-gradient(circle at 50% -20%, rgba(239,68,68,.2), transparent 60%);
+  z-index:-1;
+}
+
+/* 🔝 NAVBAR */
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 60px;
+}
+
+nav img{height:36px}
+
+nav a{
+  color:#cbd5e1;
+  margin-left:30px;
+  text-decoration:none;
+  font-size:14px;
+  transition:.2s;
+}
+nav a:hover{color:white}
+
+/* HERO */
+.hero{
+  text-align:center;
+  padding:80px 20px 120px;
+  max-width:950px;
   margin:auto;
-  filter:drop-shadow(0 0 12px rgba(239,68,68,.35));
+  animation:fadeUp 1s ease forwards;
 }
 
 .badge{
@@ -33,106 +70,117 @@ body {
   padding:6px 14px;
   border-radius:20px;
   font-size:13px;
-  margin:10px auto 20px;
-}
-
-.hero{
-  text-align:center;
-  padding:20px 20px 60px;
-  max-width:900px;
-  margin:auto;
+  margin-bottom:20px;
 }
 
 .hero h1{
-  font-size:48px;
-  margin:0 0 20px;
+  font-size:52px;
+  line-height:1.2;
+  margin-bottom:20px;
 }
-.hero h1 span{color:#ef4444;}
+.hero h1 span{color:#ef4444}
 
 .hero p{
   opacity:.7;
-  line-height:1.6;
-  max-width:650px;
+  max-width:700px;
   margin:auto;
+  line-height:1.6;
 }
 
-.buttons{
-  margin-top:30px;
-}
+.buttons{margin-top:35px}
 .btn{
   display:inline-block;
-  padding:12px 24px;
+  padding:12px 26px;
   border-radius:8px;
-  margin:10px;
   font-weight:bold;
+  margin:10px;
   text-decoration:none;
+  transition:.2s;
 }
-.btn.primary{background:#ef4444;color:white;}
-.btn.secondary{background:#1e293b;color:white;}
+.btn.primary{background:#ef4444;color:white}
+.btn.primary:hover{transform:translateY(-2px)}
+.btn.secondary{background:#1e293b;color:white}
 
+/* SECTION */
 .section{
-  padding:80px 20px;
+  padding:100px 20px;
   text-align:center;
 }
-
 .section h2{
-  font-size:30px;
-  margin-bottom:50px;
+  font-size:32px;
+  margin-bottom:60px;
 }
 
 .cards{
   display:flex;
   justify-content:center;
   flex-wrap:wrap;
-  gap:25px;
-  max-width:1100px;
+  gap:30px;
+  max-width:1200px;
   margin:auto;
 }
 
 .card{
-  background:#111827;
-  padding:25px;
-  border-radius:14px;
-  width:300px;
+  background:#0f172a;
+  padding:28px;
+  border-radius:16px;
+  width:320px;
   text-align:left;
-  box-shadow:0 0 20px rgba(0,0,0,.3);
+  border:1px solid rgba(255,255,255,.05);
+  transition:.3s;
 }
-
+.card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 0 25px rgba(239,68,68,.25);
+}
 .card h3{
-  margin:0 0 10px;
   color:#ef4444;
+  margin-bottom:12px;
 }
 
-.arch{
-  max-width:800px;
-  margin:auto;
-  text-align:left;
-  line-height:1.7;
-  opacity:.8;
-}
-
+/* FOOTER */
 footer{
   text-align:center;
-  padding:50px 20px;
+  padding:60px 20px;
   opacity:.5;
   font-size:14px;
+}
+
+/* ANIM */
+@keyframes fadeUp{
+  from{opacity:0; transform:translateY(30px)}
+  to{opacity:1; transform:translateY(0)}
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  nav{padding:20px}
+  nav div{display:none}
+  .hero h1{font-size:36px}
 }
 </style>
 </head>
 
 <body>
 
-<div class="logo">
-  <img src="assets/logo-clawcore.svg" alt="ClawCore Logo">
-</div>
+<!-- 🔝 NAVBAR -->
+<nav>
+  <img src="assets/logo-clawcore.svg" alt="ClawCore">
+  <div>
+    <a href="#">Docs</a>
+    <a href="#">Architecture</a>
+    <a href="#">Use Cases</a>
+    <a href="#">Contact</a>
+  </div>
+</nav>
 
+<!-- HERO -->
 <div class="hero">
   <div class="badge">AI CORE FOR SMART AUTOMATION</div>
   <h1>Autonomous Signal Intelligence<br>for the <span>Agent Era</span></h1>
   <p>
-    ClawCore captures digital signals, understands context, and triggers
-    intelligent automated actions. Built for AI agents, monitoring systems,
-    and next-generation automation workflows.
+    ClawCore captures digital signals, understands context, and triggers intelligent
+    automated actions. Built for AI agents, monitoring systems, and next-generation automation workflows.
   </p>
 
   <div class="buttons">
@@ -141,30 +189,32 @@ footer{
   </div>
 </div>
 
+<!-- WHAT IS -->
 <div class="section">
   <h2>What is ClawCore?</h2>
   <div class="cards">
     <div class="card">
       <h3>Signal Capture</h3>
-      <p>Continuously monitors digital environments to detect events, patterns, and anomalies in real time.</p>
+      <p>Continuously monitors digital environments to detect events, patterns, and anomalies.</p>
     </div>
     <div class="card">
       <h3>Intelligent Evaluation</h3>
-      <p>Analyzes incoming signals using AI-driven decision logic to determine meaningful actions.</p>
+      <p>AI-driven decision engine analyzes signals and determines appropriate actions.</p>
     </div>
     <div class="card">
       <h3>Autonomous Execution</h3>
-      <p>Triggers workflows, sends alerts, and interacts with external systems automatically.</p>
+      <p>Triggers workflows, sends alerts, and interacts with systems automatically.</p>
     </div>
   </div>
 </div>
 
+<!-- USE CASES -->
 <div class="section">
   <h2>Use Cases</h2>
   <div class="cards">
     <div class="card">
       <h3>AI Agent Monitoring</h3>
-      <p>Track agent activity and trigger safeguards or automated responses.</p>
+      <p>Track autonomous agent behavior and apply safeguards.</p>
     </div>
     <div class="card">
       <h3>Market & Social Signals</h3>
@@ -172,27 +222,18 @@ footer{
     </div>
     <div class="card">
       <h3>System Automation</h3>
-      <p>Integrate with APIs to execute complex automated workflows.</p>
+      <p>Integrate APIs and execute complex automated workflows.</p>
     </div>
   </div>
 </div>
 
-<div class="section">
-  <h2>Platform Architecture</h2>
-  <div class="arch">
-    ClawCore operates as a modular AI infrastructure layer. Incoming signals are captured,
-    processed through adaptive logic modules, and routed into automation pipelines.
-    The system is built to be lightweight, extensible, and capable of operating alongside
-    autonomous AI agents and monitoring platforms.
-  </div>
-</div>
-
+<!-- WHY -->
 <div class="section">
   <h2>Why ClawCore</h2>
   <div class="cards">
     <div class="card">
       <h3>Lightweight & Fast</h3>
-      <p>Minimal overhead, designed for real-time responsiveness.</p>
+      <p>Minimal overhead, built for real-time responsiveness.</p>
     </div>
     <div class="card">
       <h3>AI-Driven Decisions</h3>
@@ -200,7 +241,7 @@ footer{
     </div>
     <div class="card">
       <h3>Automation-Ready</h3>
-      <p>Connects seamlessly with workflows, bots, and external systems.</p>
+      <p>Seamlessly connects with bots, workflows, and external systems.</p>
     </div>
   </div>
 </div>
