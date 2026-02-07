@@ -13,58 +13,8 @@ body{
   color:white;
   overflow-x:hidden;
 }
-  /* ✨ Scroll Animation */
-.reveal{
-  opacity:0;
-  transform:translateY(40px);
-  transition:all 0.8s ease;
-}
-.reveal.active{
-  opacity:1;
-  transform:translateY(0);
-}
 
-/* 🖥 Dashboard Preview */
-.dashboard{
-  margin-top:80px;
-  background:#0b1220;
-  border-radius:20px;
-  padding:30px;
-  max-width:1000px;
-  margin-left:auto;
-  margin-right:auto;
-  border:1px solid rgba(255,255,255,.05);
-  box-shadow:0 0 40px rgba(239,68,68,.15);
-}
-
-.dash-top{
-  display:flex;
-  justify-content:space-between;
-  margin-bottom:20px;
-  opacity:.6;
-  font-size:13px;
-}
-
-.dash-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-  gap:20px;
-}
-
-.dash-card{
-  background:#111827;
-  padding:20px;
-  border-radius:14px;
-  border:1px solid rgba(255,255,255,.05);
-}
-
-.dash-card h4{
-  color:#ef4444;
-  margin-bottom:10px;
-  font-size:14px;
-}
-
-/* 🌌 Background grid */
+/* Background grid */
 body::before{
   content:"";
   position:fixed;
@@ -75,7 +25,6 @@ body::before{
   background-size:60px 60px;
   z-index:-2;
 }
-
 body::after{
   content:"";
   position:fixed;
@@ -84,53 +33,29 @@ body::after{
   z-index:-1;
 }
 
-/* 🔝 NAVBAR */
+/* NAV */
 nav{
   display:flex;
   justify-content:space-between;
   align-items:center;
   padding:20px 60px;
 }
-
 nav img{height:36px}
-
 nav a{
   color:#cbd5e1;
   margin-left:30px;
   text-decoration:none;
   font-size:14px;
-  transition:.2s;
 }
 nav a:hover{color:white}
 
 /* HERO */
 .hero{
   text-align:center;
-  padding:80px 20px 120px;
+  padding:100px 20px 140px;
   max-width:950px;
   margin:auto;
-  animation:fadeUp 1s ease forwards;
 }
-<div class="section highlight">
-  <h2>The Intelligence Layer Between Signals and Action</h2>
-  <p>
-    ClawCore acts as an autonomous decision engine that sits between raw digital signals and automated execution — turning noise into intelligence, and intelligence into action.
-  </p>
-</div>
-  
-.highlight{
-  background: linear-gradient(135deg, rgba(239,68,68,0.08), rgba(59,130,246,0.08));
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius:16px;
-}
-.highlight h2{
-  font-size:28px;
-}
-.highlight p{
-  max-width:750px;
-  margin:auto;
-}
-
 .badge{
   display:inline-block;
   background:rgba(239,68,68,.15);
@@ -141,21 +66,18 @@ nav a:hover{color:white}
   font-size:13px;
   margin-bottom:20px;
 }
-
 .hero h1{
   font-size:52px;
   line-height:1.2;
   margin-bottom:20px;
 }
 .hero h1 span{color:#ef4444}
-
 .hero p{
-  opacity:.7;
-  max-width:700px;
+  opacity:.75;
+  max-width:720px;
   margin:auto;
-  line-height:1.6;
+  line-height:1.7;
 }
-
 .buttons{margin-top:35px}
 .btn{
   display:inline-block;
@@ -164,20 +86,18 @@ nav a:hover{color:white}
   font-weight:bold;
   margin:10px;
   text-decoration:none;
-  transition:.2s;
 }
 .btn.primary{background:#ef4444;color:white}
-.btn.primary:hover{transform:translateY(-2px)}
 .btn.secondary{background:#1e293b;color:white}
 
-/* SECTION */
+/* SECTIONS */
 .section{
-  padding:100px 20px;
+  padding:110px 20px;
   text-align:center;
 }
 .section h2{
-  font-size:32px;
-  margin-bottom:60px;
+  font-size:30px;
+  margin-bottom:50px;
 }
 
 .cards{
@@ -188,7 +108,6 @@ nav a:hover{color:white}
   max-width:1200px;
   margin:auto;
 }
-
 .card{
   background:#0f172a;
   padding:28px;
@@ -207,6 +126,31 @@ nav a:hover{color:white}
   margin-bottom:12px;
 }
 
+/* Dashboard */
+.dashboard{
+  margin-top:60px;
+  background:#0b1220;
+  border-radius:20px;
+  padding:30px;
+  max-width:1000px;
+  margin-left:auto;
+  margin-right:auto;
+  border:1px solid rgba(255,255,255,.05);
+  box-shadow:0 0 40px rgba(239,68,68,.15);
+}
+.dash-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:20px;
+}
+.dash-card{
+  background:#111827;
+  padding:20px;
+  border-radius:14px;
+  border:1px solid rgba(255,255,255,.05);
+}
+.dash-card h4{color:#ef4444;margin-bottom:10px}
+
 /* FOOTER */
 footer{
   text-align:center;
@@ -215,58 +159,17 @@ footer{
   font-size:14px;
 }
 
-/* ANIM */
-@keyframes fadeUp{
-  from{opacity:0; transform:translateY(30px)}
-  to{opacity:1; transform:translateY(0)}
-}
-
 /* MOBILE */
 @media(max-width:768px){
   nav{padding:20px}
   nav div{display:none}
   .hero h1{font-size:36px}
 }
-.cards{
-  position:relative;
-}
-
-.cards::before{
-  content:"";
-  position:absolute;
-  top:50%;
-  left:10%;
-  right:10%;
-  height:2px;
-  background:linear-gradient(to right, #ef4444, #3b82f6);
-  z-index:-1;
-}
-
-@media(max-width:768px){
-  .cards::before{display:none;}
-}
 </style>
 </head>
 
-<script>
-const reveals = document.querySelectorAll(".reveal");
-
-function revealOnScroll(){
-  reveals.forEach(el=>{
-    const top = el.getBoundingClientRect().top;
-    if(top < window.innerHeight - 100){
-      el.classList.add("active");
-    }
-  });
-}
-
-window.addEventListener("scroll", revealOnScroll);
-revealOnScroll();
-</script>
-
 <body>
 
-<!-- 🔝 NAVBAR -->
 <nav>
   <img src="assets/logo-clawcore.svg" alt="ClawCore">
   <div>
@@ -277,158 +180,101 @@ revealOnScroll();
   </div>
 </nav>
 
-<!-- HERO -->
 <div class="hero">
   <div class="badge">AI CORE FOR SMART AUTOMATION</div>
   <h1>Autonomous Signal Intelligence<br>for the <span>Agent Era</span></h1>
   <p>
-    ClawCore captures digital signals, understands context, and triggers intelligent
-    automated actions. Built for AI agents, monitoring systems, and next-generation automation workflows.
+    ClawCore is the intelligence layer between digital signals and automated systems.
+    It captures events, understands context, and triggers smart actions — in real time.
   </p>
-
   <div class="buttons">
     <a href="https://x.com/anonnux_" target="_blank" class="btn primary">Follow Updates</a>
     <a href="#" class="btn secondary">Documentation</a>
   </div>
 </div>
 
-<!-- WHAT IS -->
+<!-- CORE IDEA -->
 <div class="section">
-  <h2>Core Intelligence Modules</h2>
+  <h2>How ClawCore Thinks</h2>
   <div class="cards">
     <div class="card">
-      <h3>Signal Capture</h3>
-      <p>Continuously monitors digital environments to detect events, patterns, and anomalies.</p>
+      <h3>Signal Intake</h3>
+      <p>Monitors APIs, logs, feeds, and live streams to capture relevant signals.</p>
     </div>
     <div class="card">
-      <h3>Intelligent Evaluation</h3>
-      <p>AI-driven decision engine analyzes signals and determines appropriate actions.</p>
+      <h3>AI Evaluation</h3>
+      <p>Filters noise, detects patterns, and determines which signals actually matter.</p>
     </div>
     <div class="card">
-      <h3>Autonomous Execution</h3>
-      <p>Triggers workflows, sends alerts, and interacts with systems automatically.</p>
+      <h3>Autonomous Action</h3>
+      <p>Triggers workflows, alerts, and system responses without human intervention.</p>
     </div>
   </div>
 </div>
 
-  <div class="section">
-  <h2>Operational Capabilities</h2>
-
-  <div class="cards">
-
-    <div class="card">
-      <h3>🔔 Real-Time Alerts</h3>
-      <p>Monitor keywords, events, or anomalies across digital platforms and receive instant alerts when important signals appear.</p>
-    </div>
-
-    <div class="card">
-      <h3>🤖 AI-Powered Decisions</h3>
-      <p>Let ClawCore evaluate incoming data using intelligent logic to determine whether an action should be triggered.</p>
-    </div>
-
-    <div class="card">
-      <h3>⚡ Automated Actions</h3>
-      <p>Trigger workflows such as sending notifications, executing scripts, or activating bots when specific conditions are met.</p>
-    </div>
-
-    <div class="card">
-      <h3>📊 Trend & Anomaly Detection</h3>
-      <p>Detect unusual activity spikes, emerging trends, or abnormal system behavior in real time.</p>
-    </div>
-
-    <div class="card">
-      <h3>🔗 System Integration</h3>
-      <p>Connect ClawCore to APIs, monitoring tools, trading bots, or automation systems through webhooks and data streams.</p>
-    </div>
-
-    <div class="card">
-      <h3>🧠 Intelligence Layer for AI Agents</h3>
-      <p>Give autonomous agents the ability to sense digital environments and react based on live signal analysis.</p>
-    </div>
-
-  </div>
-</div>
-
-  <div class="section">
-  <h2>Autonomous Processing Pipeline</h2>
-
-  <div class="cards">
-
-    <div class="card">
-      <h3>1️⃣ Capture Signals</h3>
-      <p>ClawCore continuously monitors digital sources such as APIs, social platforms, system logs, and on-chain events to capture relevant signals in real time.</p>
-    </div>
-
-    <div class="card">
-      <h3>2️⃣ Analyze with AI</h3>
-      <p>The AI decision engine evaluates incoming signals, filters noise, detects patterns, and determines whether a signal is meaningful or actionable.</p>
-    </div>
-
-    <div class="card">
-      <h3>3️⃣ Trigger Smart Actions</h3>
-      <p>When conditions are met, ClawCore automatically triggers predefined actions such as alerts, bot commands, workflow executions, or API calls.</p>
-    </div>
-
-  </div>
-</div>
-
-  <div class="section">
-  <h2>System Architecture</h2>
-
-  <div class="cards">
-    <div class="card">
-      <h3>Signal Layer</h3>
-      <p>Connects to APIs, feeds, logs, streams, and external data sources.</p>
-    </div>
-
-    <div class="card">
-      <h3>Intelligence Layer</h3>
-      <p>AI models evaluate signals, detect patterns, filter noise, and determine significance.</p>
-    </div>
-
-    <div class="card">
-      <h3>Execution Layer</h3>
-      <p>Triggers workflows, bots, alerts, and automated system responses.</p>
-    </div>
-  </div>
-</div>
-
-  <div class="section">
-  <h2>Who ClawCore Is Built For</h2>
-
-  <div class="cards">
-    <div class="card">
-      <h3>AI Agent Developers</h3>
-      <p>Add autonomous decision logic to agents that must react to real-time environments.</p>
-    </div>
-
-    <div class="card">
-      <h3>Automation Engineers</h3>
-      <p>Build systems that don’t just execute — but decide when and why to act.</p>
-    </div>
-
-    <div class="card">
-      <h3>Data & Signal Analysts</h3>
-      <p>Monitor large streams of events and receive AI-filtered actionable insights.</p>
-    </div>
-  </div>
-</div>
-
-<!-- USE CASES -->
+<!-- WHAT YOU CAN BUILD -->
 <div class="section">
-  <h2>Real-World Applications</h2>
+  <h2>What You Can Build With ClawCore</h2>
   <div class="cards">
     <div class="card">
       <h3>AI Agent Monitoring</h3>
-      <p>Track autonomous agent behavior and apply safeguards.</p>
+      <p>Track agent behavior, detect anomalies, and apply safeguards automatically.</p>
     </div>
     <div class="card">
-      <h3>Market & Social Signals</h3>
-      <p>Detect trends, keywords, and anomalies across platforms.</p>
+      <h3>Event-Driven Automation</h3>
+      <p>Let AI decide when signals are important enough to trigger actions.</p>
     </div>
     <div class="card">
-      <h3>System Automation</h3>
-      <p>Integrate APIs and execute complex automated workflows.</p>
+      <h3>Real-Time Alert Systems</h3>
+      <p>Surface meaningful signals from large volumes of digital noise.</p>
+    </div>
+    <div class="card">
+      <h3>System Orchestration</h3>
+      <p>Connect APIs, tools, and bots into autonomous decision workflows.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ARCHITECTURE -->
+<div class="section">
+  <h2>Platform Architecture</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Signal Layer</h3>
+      <p>Collects raw digital inputs from multiple sources.</p>
+    </div>
+    <div class="card">
+      <h3>Intelligence Layer</h3>
+      <p>Processes and interprets signals using AI models.</p>
+    </div>
+    <div class="card">
+      <h3>Execution Layer</h3>
+      <p>Turns decisions into automated outcomes across systems.</p>
+    </div>
+  </div>
+</div>
+
+<!-- DASHBOARD PREVIEW -->
+<div class="section">
+  <h2>ClawCore Signal Dashboard</h2>
+  <div class="dashboard">
+    <div class="dash-grid">
+      <div class="dash-card">
+        <h4>Keyword Detection</h4>
+        <p>Monitoring 2,481 live streams</p>
+      </div>
+      <div class="dash-card">
+        <h4>Anomaly Score</h4>
+        <p>Low Risk • Stable patterns</p>
+      </div>
+      <div class="dash-card">
+        <h4>AI Decision Queue</h4>
+        <p>14 actions pending execution</p>
+      </div>
+      <div class="dash-card">
+        <h4>Automation Triggers</h4>
+        <p>3 workflows activated</p>
+      </div>
     </div>
   </div>
 </div>
@@ -438,49 +284,16 @@ revealOnScroll();
   <h2>Why Teams Choose ClawCore</h2>
   <div class="cards">
     <div class="card">
-      <h3>Lightweight & Fast</h3>
-      <p>Minimal overhead, built for real-time responsiveness.</p>
+      <h3>AI-Native</h3>
+      <p>Designed for systems that must think, not just react.</p>
     </div>
     <div class="card">
-      <h3>AI-Driven Decisions</h3>
-      <p>Adaptive logic that evolves with signal patterns.</p>
+      <h3>Signal-Focused</h3>
+      <p>Filters noise so humans and systems only see what matters.</p>
     </div>
     <div class="card">
       <h3>Automation-Ready</h3>
-      <p>Seamlessly connects with bots, workflows, and external systems.</p>
-    </div>
-  </div>
-</div>
-
-  <div class="section reveal">
-  <h2>ClawCore Signal Dashboard</h2>
-
-  <div class="dashboard">
-    <div class="dash-top">
-      <div>LIVE SIGNAL STREAM</div>
-      <div>System Status: <span style="color:#22c55e">Operational</span></div>
-    </div>
-
-    <div class="dash-grid">
-      <div class="dash-card">
-        <h4>Keyword Detection</h4>
-        <p>Monitoring 2,481 live streams</p>
-      </div>
-
-      <div class="dash-card">
-        <h4>Anomaly Score</h4>
-        <p>Low Risk • Stable patterns</p>
-      </div>
-
-      <div class="dash-card">
-        <h4>AI Decision Queue</h4>
-        <p>14 actions pending execution</p>
-      </div>
-
-      <div class="dash-card">
-        <h4>Automation Triggers</h4>
-        <p>3 workflows activated</p>
-      </div>
+      <p>Built to plug directly into workflows, agents, and APIs.</p>
     </div>
   </div>
 </div>
