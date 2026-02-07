@@ -1,0 +1,12 @@
+<svg width="160" height="60" viewBox="0 0 220 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Claw Shape -->
+  <path d="M15 40C15 18 38 5 60 15C75 22 85 30 105 30C95 45 75 50 60 50C40 50 25 65 15 40Z" fill="#ef4444"/>
+  
+  <!-- Core Dot -->
+  <circle cx="110" cy="40" r="7" fill="#3b82f6"/>
+
+  <!-- Brand Text -->
+  <text x="125" y="48" fill="white" font-size="28" font-family="Arial, Helvetica, sans-serif" font-weight="600">
+    ClawCore
+  </text>
+</svg>
