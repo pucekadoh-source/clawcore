@@ -1,4 +1,4 @@
-<svg viewBox="0 0 300 80" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 420 90" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="clawGrad" x1="0" x2="1" y1="0" y2="1">
       <stop offset="0%" stop-color="#ef4444"/>
@@ -6,14 +6,14 @@
     </linearGradient>
   </defs>
 
-  <!-- Claw -->
-  <path d="M15 45C15 20 45 5 70 18C90 28 105 30 130 30C120 48 90 60 65 60C45 60 30 70 15 45Z" fill="url(#clawGrad)"/>
+  <!-- Claw shape -->
+  <path d="M20 50C20 20 55 5 85 18C110 28 130 32 160 32C145 55 110 70 75 70C55 70 40 80 20 50Z" fill="url(#clawGrad)"/>
 
-  <!-- Dot -->
-  <circle cx="140" cy="40" r="6" fill="#3b82f6"/>
+  <!-- Blue dot -->
+  <circle cx="175" cy="45" r="7" fill="#3b82f6"/>
 
   <!-- Text -->
-  <text x="160" y="50" fill="white" font-size="30" font-family="Arial, Helvetica, sans-serif" font-weight="600">
+  <text x="195" y="55" fill="white" font-size="34" font-family="Arial, Helvetica, sans-serif" font-weight="600">
     ClawCore
   </text>
 </svg>
