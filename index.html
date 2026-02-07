@@ -14,7 +14,7 @@ body{
   overflow-x:hidden;
 }
 
-/* Background grid */
+/* Background */
 body::before{
   content:"";
   position:fixed;
@@ -55,7 +55,6 @@ nav a:hover{color:white}
   padding:100px 20px 140px;
   max-width:950px;
   margin:auto;
-  position:relative;
 }
 .badge{
   display:inline-block;
@@ -123,7 +122,7 @@ nav a:hover{color:white}
   to{opacity:1}
 }
 
-/* SECTIONS */
+/* SECTION */
 .section{
   padding:110px 20px;
   text-align:center;
@@ -147,28 +146,18 @@ nav a:hover{color:white}
   width:320px;
   text-align:left;
   border:1px solid rgba(255,255,255,.05);
-  transition:.3s;
 }
-.card:hover{
-  transform:translateY(-6px);
-  box-shadow:0 0 25px rgba(239,68,68,.25);
-}
-.card h3{
-  color:#ef4444;
-  margin-bottom:12px;
-}
+.card h3{color:#ef4444;margin-bottom:12px}
 
-/* Dashboard */
+/* DASHBOARD */
 .dashboard{
   margin-top:60px;
   background:#0b1220;
   border-radius:20px;
   padding:30px;
   max-width:1000px;
-  margin-left:auto;
-  margin-right:auto;
+  margin:auto;
   border:1px solid rgba(255,255,255,.05);
-  box-shadow:0 0 40px rgba(239,68,68,.15);
 }
 .dash-grid{
   display:grid;
@@ -180,39 +169,14 @@ nav a:hover{color:white}
   padding:20px;
   border-radius:14px;
   border:1px solid rgba(255,255,255,.05);
-  position:relative;
-}
-.dash-card::after{
-  content:"";
-  position:absolute;
-  top:12px;
-  right:12px;
-  width:8px;
-  height:8px;
-  border-radius:50%;
-  background:#22c55e;
-  box-shadow:0 0 8px #22c55e;
-  animation:blink 1.5s infinite;
-}
-@keyframes blink{
-  0%,100%{opacity:.3}
-  50%{opacity:1}
 }
 .dash-card h4{color:#ef4444;margin-bottom:10px}
 
-/* FOOTER */
 footer{
   text-align:center;
   padding:60px 20px;
   opacity:.5;
   font-size:14px;
-}
-
-/* MOBILE */
-@media(max-width:768px){
-  nav{padding:20px}
-  nav div{display:none}
-  .hero h1{font-size:36px}
 }
 </style>
 </head>
@@ -232,13 +196,9 @@ footer{
 <div class="hero">
   <div class="badge">AI CORE FOR SMART AUTOMATION</div>
   <h1>Autonomous Signal Intelligence<br>for the <span>Agent Era</span></h1>
-  <p>
-    ClawCore is the intelligence layer between digital signals and automated systems.
-    It captures events, understands context, and triggers smart actions — in real time.
-  </p>
-
+  <p>ClawCore captures signals, understands context, and triggers intelligent actions in real time.</p>
   <div class="buttons">
-    <a href="https://x.com/anonnux_" target="_blank" class="btn primary">Follow Updates</a>
+    <a href="#" class="btn primary">Follow Updates</a>
     <a href="#" class="btn secondary">Documentation</a>
   </div>
 
@@ -251,11 +211,50 @@ footer{
   </div>
 </div>
 
-<!-- Sections stay exactly like your previous structure here -->
+<!-- THINK -->
+<div class="section">
+  <h2>How ClawCore Thinks</h2>
+  <div class="cards">
+    <div class="card"><h3>Signal Intake</h3><p>Captures live digital events.</p></div>
+    <div class="card"><h3>AI Evaluation</h3><p>Determines which signals matter.</p></div>
+    <div class="card"><h3>Autonomous Action</h3><p>Triggers smart automated responses.</p></div>
+  </div>
+</div>
 
-<footer>
-  © 2026 ClawCore — Autonomous AI Automation Core
-</footer>
+<!-- BUILD -->
+<div class="section">
+  <h2>What You Can Build</h2>
+  <div class="cards">
+    <div class="card"><h3>AI Monitoring</h3><p>Track agent behavior in real time.</p></div>
+    <div class="card"><h3>Event Automation</h3><p>AI decides when to act.</p></div>
+    <div class="card"><h3>Alert Systems</h3><p>Detect important signals instantly.</p></div>
+  </div>
+</div>
+
+<!-- ARCHITECTURE -->
+<div class="section">
+  <h2>Platform Architecture</h2>
+  <div class="cards">
+    <div class="card"><h3>Signal Layer</h3><p>Collects raw data streams.</p></div>
+    <div class="card"><h3>Intelligence Layer</h3><p>Processes and interprets signals.</p></div>
+    <div class="card"><h3>Execution Layer</h3><p>Triggers automated outcomes.</p></div>
+  </div>
+</div>
+
+<!-- DASHBOARD -->
+<div class="section">
+  <h2>ClawCore Signal Dashboard</h2>
+  <div class="dashboard">
+    <div class="dash-grid">
+      <div class="dash-card"><h4>Keyword Detection</h4><p>Monitoring 2,481 streams</p></div>
+      <div class="dash-card"><h4>Anomaly Score</h4><p>Low Risk</p></div>
+      <div class="dash-card"><h4>AI Decision Queue</h4><p>14 actions pending</p></div>
+      <div class="dash-card"><h4>Automation Triggers</h4><p>3 workflows active</p></div>
+    </div>
+  </div>
+</div>
+
+<footer>© 2026 ClawCore — Autonomous AI Automation Core</footer>
 
 </body>
 </html>
