@@ -208,6 +208,24 @@ footer{
   nav div{display:none}
   .hero h1{font-size:36px}
 }
+.cards{
+  position:relative;
+}
+
+.cards::before{
+  content:"";
+  position:absolute;
+  top:50%;
+  left:10%;
+  right:10%;
+  height:2px;
+  background:linear-gradient(to right, #ef4444, #3b82f6);
+  z-index:-1;
+}
+
+@media(max-width:768px){
+  .cards::before{display:none;}
+}
 </style>
 </head>
 
