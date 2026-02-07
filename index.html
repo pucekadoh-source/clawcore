@@ -13,6 +13,56 @@ body{
   color:white;
   overflow-x:hidden;
 }
+  /* ✨ Scroll Animation */
+.reveal{
+  opacity:0;
+  transform:translateY(40px);
+  transition:all 0.8s ease;
+}
+.reveal.active{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* 🖥 Dashboard Preview */
+.dashboard{
+  margin-top:80px;
+  background:#0b1220;
+  border-radius:20px;
+  padding:30px;
+  max-width:1000px;
+  margin-left:auto;
+  margin-right:auto;
+  border:1px solid rgba(255,255,255,.05);
+  box-shadow:0 0 40px rgba(239,68,68,.15);
+}
+
+.dash-top{
+  display:flex;
+  justify-content:space-between;
+  margin-bottom:20px;
+  opacity:.6;
+  font-size:13px;
+}
+
+.dash-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:20px;
+}
+
+.dash-card{
+  background:#111827;
+  padding:20px;
+  border-radius:14px;
+  border:1px solid rgba(255,255,255,.05);
+}
+
+.dash-card h4{
+  color:#ef4444;
+  margin-bottom:10px;
+  font-size:14px;
+}
 
 /* 🌌 Background grid */
 body::before{
@@ -161,6 +211,22 @@ footer{
 </style>
 </head>
 
+<script>
+const reveals = document.querySelectorAll(".reveal");
+
+function revealOnScroll(){
+  reveals.forEach(el=>{
+    const top = el.getBoundingClientRect().top;
+    if(top < window.innerHeight - 100){
+      el.classList.add("active");
+    }
+  });
+}
+
+window.addEventListener("scroll", revealOnScroll);
+revealOnScroll();
+</script>
+
 <body>
 
 <!-- 🔝 NAVBAR -->
@@ -242,6 +308,39 @@ footer{
     <div class="card">
       <h3>Automation-Ready</h3>
       <p>Seamlessly connects with bots, workflows, and external systems.</p>
+    </div>
+  </div>
+</div>
+
+  <div class="section reveal">
+  <h2>ClawCore Signal Dashboard</h2>
+
+  <div class="dashboard">
+    <div class="dash-top">
+      <div>LIVE SIGNAL STREAM</div>
+      <div>System Status: <span style="color:#22c55e">Operational</span></div>
+    </div>
+
+    <div class="dash-grid">
+      <div class="dash-card">
+        <h4>Keyword Detection</h4>
+        <p>Monitoring 2,481 live streams</p>
+      </div>
+
+      <div class="dash-card">
+        <h4>Anomaly Score</h4>
+        <p>Low Risk • Stable patterns</p>
+      </div>
+
+      <div class="dash-card">
+        <h4>AI Decision Queue</h4>
+        <p>14 actions pending execution</p>
+      </div>
+
+      <div class="dash-card">
+        <h4>Automation Triggers</h4>
+        <p>3 workflows activated</p>
+      </div>
     </div>
   </div>
 </div>
